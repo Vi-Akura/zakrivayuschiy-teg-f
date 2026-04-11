@@ -20,6 +20,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: var(--main-font);
+  font-variation-settings: "wght" 400 785;
 }
 
 .header {
@@ -130,8 +132,13 @@
   text-transform: uppercase;
   mix-blend-mode: hard-light;
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
-  text-stroke: 1px rgba(255, 255, 255, 0.5);
   paint-order: stroke fill;
+}
+
+@supports (text-stroke: 1px rgba(255, 255, 255, 0.5)) {
+  .label {
+    text-stroke: 1px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .card__info {
