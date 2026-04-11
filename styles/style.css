@@ -13,4 +13,356 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--body-gradient);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  inline-size: var(--block-width);
+  block-size: 368px;
+  background-color: var(--bg-color);
+  outline: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 130px 122.5px;
+  margin-block-start: 100px;
+  margin-block-end: 98px;
+}
+
+.logo {
+  font-family: var(--accent-font);
+  font-weight: var(--accent-weight);
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-block-end: 20px;
+}
+
+.header__title {
+  font-family: var(--accent-font);
+  font-weight: var(--accent-weight);
+  font-size: clamp(0.875rem, 0.677rem + 0.845vi, 1.438rem);
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.card__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__list-item {
+  inline-size: var(--block-width);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  margin-block-end: 50px;
+}
+
+.card__heading {
+  font-family: var(--main-font);
+  font-weight: var(--heading-weight);
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.label__container {
+  position: relative;
+  z-index: 1;
+  border-top: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.card__image {
+  display: block;
+  max-width: 696px;
+  width: 100%;
+  max-height: 696px;
+  height: 100%;
+}
+
+.img-cat {
+  filter: brightness(120%);
+}
+
+.img-strange-cat {
+  filter: blur(0.3rem);
+}
+
+.img-fight {
+  filter: contrast(150%);
+}
+
+.img-friends {
+  filter: hue-rotate(-50deg);
+}
+
+.img-dog {
+  filter: saturate(150%);
+}
+
+.img-statham {
+  filter: invert(1);
+}
+
+.img-naumov {
+  filter: invert(1) grayscale(0.8) opacity(0.7);
+}
+
+.label {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  right: 24px;
+  font-family: var(--accent-font);
+  font-weight: var(--accent-weight);
+  font-size: 14px;
+  color:rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  text-stroke: 1px rgba(255, 255, 255, 0.5);
+  paint-order: stroke fill;
+}
+
+.card__info {
+  padding-block-start: 25px;
+  padding-block-end: 25px;
+  padding-inline-start: 25px;
+  padding-inline-end: 25px;
+}
+
+.card__text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font);
+  font-weight: 410;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card__text-span {
+  margin-block-end: 25px;
+}
+
+.button__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+  width: 39px;
+  height: 36px;
+  padding: 0;
+  margin-inline-end: 9px;
+  fill: transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--border-color);
+}
+
+.like-icon {
+  transform-origin: center;
+}
+
+.card__like-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 38px;
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--bg-color);
+  mix-blend-mode: difference;
+  font-family: var(--accent-font);
+  font-weight: var(--accent-font);
+  font-size: 14px;
+  line-height: 0.9;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-end: 100px;
+}
+
+.button__popover {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  max-width: 335px;
+  height: 56px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-start: 11px;
+  padding-block-end: 12px;
+}
+
+.floppy {
+  position: relative;
+  z-index: 1;
+  filter: invert(100%);
+  mix-blend-mode: difference;
+  width: 21px;
+  height: 21px;
+}
+
+.dialog {
+  max-inline-size: 353px;
+  display: flex;
+  flex-direction: column;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+}
+
+.dialog-id {
+  max-inline-size: 353px;
+  padding: 30px;
+}
+
+.dialog__popover {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  margin-block-end: 30px;
+}
+
+.dialog__text {
+  line-height: 150%;
+}
+
+.floppy__popover {
+  display: block;
+  flex-shrink: 0;
+  width: 39px;
+  height: 39px;
+}
+
+.button__dialog {
+  padding: 12.5px 127.5px;
+  font-family: var(--accent-font);
+  font-weight: var(--accent-weight);
+  font-size: 14px;
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+}
+
+.button-focus {
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.button-focus:focus {
+  outline: none;
+}
+
+.button-focus:focus-visible {
+  box-shadow: 2px 2px 0 var(--border-color);
+}
+
+.button-focus::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--border-color);
+  transform-origin: bottom left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.button-focus:hover::before {
+  transform: scaleX(1);
+}
+
+@media (width <= 375px) {
+  .header {
+    padding: 122px 16px;
+    margin-block-end: 100px;
+    block-size: 327px;
+  }
+
+  .card__image {
+    display: block;
+    max-width: 371px;
+    width: 100%;
+    max-height: 371px;
+    height: 100%;
+}
+
+  .button__popover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    max-width: 306px;
+    height: 84px;
+    padding-block-start: 0px;
+    padding-block-end: 0px;
+}
+
+  .floppy {
+    width: 28px;
+    height: 28px;
+}
+
+  .mobile-text {
+    text-wrap: nowrap;
+}
+
+  .dialog-id {
+    max-inline-size: 341px;
+    padding-block-start: 30px;
+    padding-block-end: 30px;
+    padding-inline-start: 40px;
+    padding-inline-end: 40px;
+}
+
+  .dialog__text {
+    line-height: 150%;
+}
+
+  .floppy__popover {
+    display: block;
+    flex-shrink: 0;
+    width: 39px;
+    height: 39px;
+}
+
+  .button__dialog {
+    padding: 12.5px 112.5px;
+}
 }
