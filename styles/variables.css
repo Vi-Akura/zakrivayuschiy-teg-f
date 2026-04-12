@@ -1,9 +1,10 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: Inter;
-  --accent-font: PressStart2P;
+  --main-font: Inter, sans-serif;
+  --accent-font: PressStart2P, fantasy;
   --accent-weight: 400;
   --heading-weight: 715;
+  --page-weight: 410;
   --body-gradient: 
     repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
     repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
@@ -16,4 +17,5 @@
   --animation-fill-color: #000;
   --animation-active-color: red;
   --contour-color: red;
+  --shadow-stroke-color: rgba(255, 255, 255, 0.5);
 }
